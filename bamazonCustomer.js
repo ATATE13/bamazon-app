@@ -41,6 +41,7 @@ var selectProductId = function(){
                 //Else user does not input a valid value...
             } else {
                 //Invalid statement.
+                
                 console.log("Invalid. Please input a number from 1 up to 10.")
                 //Restarts the selectProductId function until customer inputs a valid number.
                 selectProductId();
@@ -85,6 +86,25 @@ var stockProduct = function(idnumber) {
         })
     })
 
-}
+};
+//Ask user if they would like to make additional purchases or ends the session.
+var restartOrder = function() {
+    inquirer
+        .prompt([
+            {
+                type: "list",
+                message: "Would you like make additional purchases: ",
+                choices: ["Yes", "No"],
+                name: "restartOrder"
+            }
+    ]).then(function (choices) {
+            if (choices.restartOrder === "Yes") {
+                console.log(choices.restartOrder);
+                restartOrder();
+            } else if (choices.restartOrder === "No"){
+                return
+            }
+        })
+};
 //Begins the application by invoking the start function.
 start();
