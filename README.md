@@ -5,7 +5,6 @@ Node.js and MySQL, command-line Amazon-like storefront application.
 
 * [About this project](#about-this-project)
 * [Project requirements](#project-requirements)
-* [Live-video](#live)
 * [Structure of the project](#structure-of-the-project)
 * [Screenshots](#screenshots)
 * [Technologies used to create app](#technologies-used)
@@ -31,10 +30,6 @@ This project is an Amazon-like storefront with the MySQL skills. The app takes o
 <li>The next prompt asks how many units of the product they would like to buy.</li>
 <li>Once Customer places order the application checks if your store has enough of the product to meet the customers request.</li>
 <li>If the store does have enough fo the product, you fulfill the customer's order.</li>
-
-## <a name="live"></a> Live
-Video using the app:
-
 
 ## <a name="structure-of-the-project"></a> Structure of the project
 <li>README.md</li>
