@@ -80,8 +80,10 @@ var stockProduct = function(idnumber) {
                 //As well as the total cost for their purchase.
                 console.log("Total Cost of Purchase: " + (res[stockIndex - 1].price) * answer.stock);
                 console.log("Cost: " + (res[stockIndex - 1].price) * answer.stock);
+                restartOrder();
             } else {
                 console.log("Insufficient quantity!");
+                restartOrder();
             }
         })
     })
@@ -99,12 +101,12 @@ var restartOrder = function() {
             }
     ]).then(function (choices) {
             if (choices.restartOrder === "Yes") {
-                console.log(choices.restartOrder);
-                restartOrder();
+                selectProductId();
             } else if (choices.restartOrder === "No"){
-                return
+                connection.end();
             }
         })
 };
+
 //Begins the application by invoking the start function.
 start();
